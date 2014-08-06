@@ -35,9 +35,12 @@ def allowed_file(filename):
     return '.' in filename.lower() and \
            filename.lower().rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
+@app.route('/', methods=['GET', 'POST'])
+def main():
+    return render_template("login.html")
 
 # index.html
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/index', methods=['GET', 'POST'])
 def start():
     if request.method == 'POST':
         file = request.files['file']
@@ -50,10 +53,17 @@ def start():
             url = url_for("shows", key=upload_data.key())
             exif_data = get_exif_data(StringIO(filestream))
 
-            return render_template('ShowExif.html',
+            return render_template('index.html',
                 original_path = url,
                 exif_data = exif_data)
     return render_template("index.html")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.form['ID'] == "abcd" and request.form['PW'] == "1234":
+        return render_template("index.html")
+    else:
+        return render_template("login.html")    
 
 
 @app.route('/show/<key>', methods=['GET'])

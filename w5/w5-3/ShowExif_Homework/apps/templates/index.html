@@ -6,7 +6,7 @@
 </head>
 <body>
     <fieldset>
-        <form action="" enctype="multipart/form-data" method="post">
+        <form action="{{url_for('start')}}" enctype="multipart/form-data" method="post">
             <p>
                 정보를 보고 싶은 이미지를 업로드하세요.
                 <br />
@@ -14,9 +14,9 @@
                 <input type="submit" value="Upload">
             </p>
         </form>
-<!--     </fieldset>
+     </fieldset>
     
-    <fieldset> -->
+    <fieldset>
         <h3>원본 이미지</h3>
         <img src = "{{ original_path }}" width="100%" />
     </fieldset>
