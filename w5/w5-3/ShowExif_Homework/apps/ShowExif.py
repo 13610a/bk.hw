@@ -56,7 +56,7 @@ def start():
             return render_template('index.html',
                 original_path = url,
                 exif_data = exif_data)
-    return render_template("index.html")
+    return render_template("index.html")j////   
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

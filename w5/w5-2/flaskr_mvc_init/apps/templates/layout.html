@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+    <title>고릴라 머리</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <style>
+    a {
+    	text-decoration: none;
+	}
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Gorilla Head</h1>
+        <div class="metanav"></div>
+        {% block body %}{% endblock %}
+    </div>
+</body>
+<script src="{{ url_for('static', filename='js/flaskr.js') }}"></script>

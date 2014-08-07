@@ -37,7 +37,7 @@ for i in range(5):
 
 for i in range(5):
 	for j in range(5):
-		rotate_array[i][j] = init_array[j][4-i]
+		rotate_array[j][4-i] = init_array[i][j]
 
 
 print
@@ -46,4 +46,3 @@ for column in rotate_array:
 		print "%2s" % num,
 	print
 # print result array
-# 영어 주석 힘들다.

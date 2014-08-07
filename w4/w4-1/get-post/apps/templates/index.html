@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>GET / POST</title>
+</head>
+<body>
+	<div>
+		GET : 
+		<form action="" method="get">
+			<input type="text" name="text_get">
+			<input type="Submit" value="Submit">
+		</form>
+		
+		{% if naver != "" %}
+			<a href="{{ naver }}" target=_blank>네이버</a>
+			<a href="{{ daum  }}" target=_blank>다음</a>
+			<a href="{{ google }}" target=_blank>구글</a>
+		{% endif %}
+	</div>
+
+</body>
+</html>
