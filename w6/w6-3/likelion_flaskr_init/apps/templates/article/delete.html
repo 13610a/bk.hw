@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block contents %}
+    <div class="llArticleDelete">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+                <span class="sr-only">Close</span>
+            </button>
+            <strong>경고!</strong> 정말 삭제 한다능. 괜찮냐능??
+        </div>
+
+        <form role="form" method="post">
+            <input type="hidden" name="article_id" value="{{ article_id }}">
+            <button type="submit" class="btn btn-danger">난 쿨하니까 그래도 삭제</button>
+        </form>
+    </div>
+{% endblock %}
