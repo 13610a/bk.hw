@@ -130,6 +130,18 @@ def article_like_ajax():
 	return jsonify(id=id)
 
 
+@app.route('/comment/detail_like', methods=['GET'])
+def comment_like_ajax():
+	id = request.args.get('id', 0, type=int)
+
+	comment = Comment.query.get(id)
+	comment.like += 1
+
+	db.session.commit()
+
+	return jsonify(id=id)
+
+
 #
 # @comment controllers
 #

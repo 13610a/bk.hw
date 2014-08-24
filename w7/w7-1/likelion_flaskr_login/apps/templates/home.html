@@ -9,6 +9,12 @@
                     <h3>{{ article.author }}</h3>
                     <h6>{{ article.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</h6>
 
+                    <button type="button" class="btn btn-warning float-right">
+                        <i class="fa fa-thumbs-o-up"></i> 
+                        <strong>좋아요</strong> 
+                        <span>{{ article.like }}</span>
+                        <input name="id" type="hidden" value="{{ article.id }}"/>
+                    </button>
 <!--
                     <p>
                         {{ article.content|truncate(50)|safe }}
